@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arumuga Gomathi R | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0d1b2a;
+            color: #fff;
+            text-align: center;
+        }
+        nav {
+            background: #1b263b;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff9800;
+        }
+        header {
+            background: url('background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+        .overlay h1 {
+            font-size: 3rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+        section {
+            padding: 80px 50px;
+            max-width: 900px;
+            margin: auto;
+            margin-top: 80px;
+            background: #1e3a5f;
+            border-radius: 10px;
+        }
+        .info-card {
+            background: #294c74;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ff9800;
+            display: none;
+            margin: auto;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#internship">Internship</a>
+        <a href="#projects">Projects</a>
+        <a href="#community">Community</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <header id="home">
+        <div class="overlay">
+            <h1>Arumuga Gomathi R</h1>
+            <p>Cloud Computing Enthusiast & Software Developer</p>
+        </div>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am passionate about cloud computing and software development, actively seeking an entry-level role to leverage my problem-solving skills.</p>
+        <img src="20240514_151623.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <div class="info-card">
+            <h3>Bachelor of Engineering - Electronics & Communication</h3>
+            <p>University VOC College of Engineering, Anna University | CGPA: 7.5 (2019 - 2023)</p>
+            <h3>Hilton Matriculation Higher Secondary School</h3>
+            <p>Higher Secondary: 72.6% (2018 - 2019)</p>
+            <p>Senior Secondary: 93.8% (2016 - 2017)</p>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Python, AWS, MySQL, Linux System Administration</p>
+    </section>
+    
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <p>AWS Certified Cloud Practitioner</p>
+        <p>Linux System Administration - Kodekloud</p>
+    </section>
+    
+    <section id="internship">
+        <h2>Internship</h2>
+        <h3>AWS Remote Internship - TCS ion</h3>
+        <p>Developed a web application using AWS and completed industry-specific assignments.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <h3>Image Classification Model</h3>
+        <p>Developed an AI model for detecting citrus fruit diseases using CNN with 99% accuracy.</p>
+    </section>
+    
+    <section id="community">
+        <h2>Community Engagement</h2>
+        <p>Evidhai - Community Member</p>
+        <p>AWS Women in Tech India - Volunteer</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: r.arumugagomathi@gmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/arumugagomathi" target="_blank">My LinkedIn</a></p>
+    </section>
+    
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+                if (this.getAttribute('href') === '#about') {
+                    document.getElementById('profile-pic').style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
